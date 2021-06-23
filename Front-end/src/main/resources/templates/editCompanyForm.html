@@ -1,0 +1,60 @@
+<link
+	href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css"
+	rel="stylesheet" id="bootstrap-css">
+<script
+	src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<body>
+	<div style="width: 30%; margin-left: 35%; margin-top: 80px">
+		<form method="POST">
+			<div class="form-group">
+				<label for="name">CompanyID</label> <input type="text" class="form-control"
+					th:value="${company.macty}" name="macty" disabled="true"/>
+			</div>
+
+			<div class="form-group">
+				<label for="name">Name</label> <input type="text"
+					class="form-control" th:value="${company.ten}" required
+					name="ten">
+			</div>
+			<div class="form-group">
+				<label for="name">Tax Code</label> <input type="text"
+					class="form-control" th:value="${company.msthue}"
+					required name="msthue" />
+			</div>
+			<div class="form-group">
+				<label for="name">Authorized capital</label> <input type="text"
+					class="form-control" th:value="${company.vondieule}"
+					required name="vondieule" />
+			</div>
+			<div class="form-group">
+				<label for="name">Field</label> <input type="text"
+					class="form-control" th:value="${company.linhvuc}"
+					required name="linhvuc" />
+			</div>
+			<div class="form-group">
+				<label for="name">Number of workers</label> <input type="text"
+					class="form-control" th:value="${company.sonv}"
+					required name="sonv" />
+			</div>
+			<div class="form-group">
+				<label for="name">Address</label> <input type="text"
+					class="form-control" th:value="${company.diachi}"
+					name="diachi" />
+			</div>
+			<div class="form-group">
+				<label for="name">Phone</label> <input type="text"
+					class="form-control" th:value="${company.sdt}"
+					name="sdt" />
+			</div>
+			<div class="form-group">
+				<label for="name">Ground area</label> <input type="text"
+					class="form-control" th:value="${company.dientich}"
+					name="dientich" />
+			</div>
+			<button type="submit" class="btn btn-success">Submit</button>
+			<a th:href="@{/company}" class="btn btn-success"
+				style="margin-left: 50px">Cancel</a>
+		</form>
+	</div>
+</body>

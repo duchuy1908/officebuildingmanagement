@@ -1,0 +1,27 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<body>
+<div style="width: 30%;margin-left:35%;margin-top:80px">
+    <form method="POST">
+   <div class="form-group">
+            <label for="name">ID</label>
+            <input type="text" class="form-control"  th:value="${service.madv}" name="madv" disabled="true" />
+        </div>
+          
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" th:value="${service.tendv}" required  name="tendv"  >
+        </div>
+       <div class="form-group">
+            <label for="name">Type</label>
+            <input type="text" class="form-control" th:value="${service.loaidv}"   required name="loaidv"/>
+        </div>
+        <div class="form-group">
+            <label for="name">Price</label>
+            <input type="text" class="form-control" th:value="${service.dongia}" required   name="dongia"/>
+        <button type="submit" class="btn btn-success">Submit</button>
+        <a th:href="@{/service}" class="btn btn-success" style="margin-left:50px">Cancel</a>
+    </form>
+</div>
+</body>

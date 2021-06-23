@@ -1,0 +1,33 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<body>
+<div style="width: 30%;margin-left:35%;margin-top:80px">
+    <form method="POST">
+   <div class="form-group">
+            <label for="name">ID</label>
+            <input type="text" class="form-control"  th:value="${employee.manv}" disabled="true" />
+        </div>
+          
+        <div class="form-group">
+            <label for="name">ID Cart</label>
+            <input type="text" class="form-control" th:value="${employee.cmt}" required  name="cmt"  >
+        </div>
+       <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" th:value="${employee.ten}"   required name="ten"/>
+        </div>
+        <div class="form-group">
+            <label for="name">DateofBirth</label>
+            <input type="text" class="form-control" th:value="${employee.ngaysinh}"   name="ngaysinh"/>
+        </div>
+          <div class="form-group">
+            <label for="name">Phone</label>
+            <input type="text" class="form-control" th:value="${employee.sdt}"    name="sdt"/>
+        </div>
+
+        <button type="submit" class="btn btn-success">Submit</button>
+        <a th:href="@{/employee}" class="btn btn-success" style="margin-left:50px">Cancel</a>
+    </form>
+</div>
+</body>

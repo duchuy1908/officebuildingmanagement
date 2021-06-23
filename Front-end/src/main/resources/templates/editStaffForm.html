@@ -1,0 +1,40 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<body>
+<div style="width: 30%;margin-left:35%;margin-top:80px">
+    <form method="POST">
+   <div class="form-group">
+            <label for="name">ID</label>
+            <input type="text" class="form-control"  th:value="${staff.manv}" disabled="true" />
+        </div>
+          
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" th:value="${staff.hoten}" required id="fullname" name="hoten"  >
+        </div>
+       <div class="form-group">
+            <label for="name">DateofBirth</label>
+            <input type="text" class="form-control" th:value="${staff.ngaysinh}"  id="dateofbirth" required name="ngaysinh"/>
+        </div>
+        <div class="form-group">
+            <label for="name">Address</label>
+            <input type="text" class="form-control" th:value="${staff.diachi}" id="phonenumber"  name="diachi"/>
+        </div>
+          <div class="form-group">
+            <label for="name">Phone</label>
+            <input type="text" class="form-control" th:value="${staff.sdt}"  id="phonenumber"  name="sdt"/>
+        </div>
+         `	 <div class="form-group">
+            <label for="name">Level</label>
+            <input type="text" class="form-control" th:value="${staff.bac}"  id="phonenumber"  name="bac"/>
+        </div>
+          <div class="form-group">
+            <label for="name">Position</label>
+            <input type="text" class="form-control" th:value="${staff.vitri}"  id="phonenumber"  name="vitri"/>
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+        <a th:href="@{/staff}" class="btn btn-success" style="margin-left:50px">Cancel</a>
+    </form>
+</div>
+</body>
